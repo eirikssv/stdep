@@ -9,3 +9,11 @@ if selectStartDate:
     st.write(selectStartDate)
 
 st.write('Oppdatert')
+
+data = pd.DataFrame()
+
+pdFile = st.file_uploader('Upload .csv', type='csv')
+
+data = pd.read_csv(pdFile, decimal=",", sep=";")
+
+st.dataframe(data)
