@@ -14,6 +14,7 @@ data = pd.DataFrame()
 
 pdFile = st.file_uploader('Upload .csv', type='csv')
 
-data = pd.read_csv(pdFile, decimal=",", sep=";")
+if pdFile:
+    data = pd.read_csv(pdFile, decimal=",", sep=";")
 
 st.dataframe(data)
