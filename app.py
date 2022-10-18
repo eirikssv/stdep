@@ -7,4 +7,5 @@ selectStartDate = st.date_input('Starting date..')
 
 if selectStartDate:
     st.write(selectStartDate)
-    
+
+st.write('Oppdatert')
